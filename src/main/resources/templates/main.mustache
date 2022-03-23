@@ -1,0 +1,18 @@
+<html>
+<body>
+    <div>
+        <form method = "get">
+            <input type = "text" placeholder = "Введите имя автора"
+            <button type = "submit">Поиск</button>
+        </form>
+    </div>
+    <div>Список статьей</div>
+    {{#articles}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{name}}</span>
+
+    </div>
+    {{/articles}}
+</body>
+</html>
