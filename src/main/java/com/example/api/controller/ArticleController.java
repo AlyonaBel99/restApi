@@ -19,23 +19,9 @@ import java.util.Locale;
 
 @RestController
 public class ArticleController {
+    
     @Autowired
     private ArticleRepository articleRepository;
-
-    @Autowired
-    private AuthorRepository authorRepository;
-
-   /* @GetMapping("/artical")
-    public List<Article> all() {
-        return repository.findAll();
-    }*/
-/*
-    @GetMapping
-    public Employee one(@RequestParam String name, ) {
-
-        return repository.findById(id)
-                .orElseThrow(() -> new EmployeeNotFoundException(id));
-    }*/
 
     @GetMapping("/articale/{id}")
     Article one(@PathVariable Long id) {
@@ -53,7 +39,6 @@ public class ArticleController {
 
         return articleRepository.findByCategoryName(categoryName);
     }
-
 
     @GetMapping("/articale/author/{authorName}")
     public List<Article> getAuthorName (@PathVariable String authorName) {
